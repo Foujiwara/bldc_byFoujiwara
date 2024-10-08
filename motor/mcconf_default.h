@@ -36,16 +36,16 @@
 
 // Limits
 #ifndef MCCONF_L_CURRENT_MAX
-#define MCCONF_L_CURRENT_MAX			60.0	// Current limit in Amperes (Upper)
+#define MCCONF_L_CURRENT_MAX			100.0	// Current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_CURRENT_MIN
-#define MCCONF_L_CURRENT_MIN			-60.0	// Current limit in Amperes (Lower)
+#define MCCONF_L_CURRENT_MIN			-100.0	// Current limit in Amperes (Lower)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MAX
-#define MCCONF_L_IN_CURRENT_MAX			99.0	// Input current limit in Amperes (Upper)
+#define MCCONF_L_IN_CURRENT_MAX			100.0	// Input current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MIN
-#define MCCONF_L_IN_CURRENT_MIN			-60.0	// Input current limit in Amperes (Lower)
+#define MCCONF_L_IN_CURRENT_MIN			-50.0	// Input current limit in Amperes (Lower)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MAP_START
 #define MCCONF_L_IN_CURRENT_MAP_START	1.0		// Input current to Q axis current limit map start
@@ -63,16 +63,16 @@
 #define MCCONF_L_MAX_VOLTAGE			57.0	// Maximum input voltage
 #endif
 #ifndef MCCONF_L_BATTERY_CUT_START
-#define MCCONF_L_BATTERY_CUT_START		10.0	// Start limiting the positive current at this voltage
+#define MCCONF_L_BATTERY_CUT_START		20.0	// Start limiting the positive current at this voltage
 #endif
 #ifndef MCCONF_L_BATTERY_CUT_END
-#define MCCONF_L_BATTERY_CUT_END		8.0		// Limit the positive current completely at this voltage
+#define MCCONF_L_BATTERY_CUT_END		12.0		// Limit the positive current completely at this voltage
 #endif
 #ifndef MCCONF_L_BATTERY_REGEN_CUT_START
-#define MCCONF_L_BATTERY_REGEN_CUT_START    1000.0	// Start limiting the regen current at this voltage
+#define MCCONF_L_BATTERY_REGEN_CUT_START    90.0	// Start limiting the regen current at this voltage
 #endif
 #ifndef MCCONF_L_BATTERY_REGEN_CUT_END
-#define MCCONF_L_BATTERY_REGEN_CUT_END  1100.0		// Limit the regen current completely at this voltage
+#define MCCONF_L_BATTERY_REGEN_CUT_END  95.0		// Limit the regen current completely at this voltage
 #endif
 #ifndef MCCONF_L_RPM_MAX
 #define MCCONF_L_RPM_MAX				100000.0	// The motor speed limit (Upper)
@@ -404,7 +404,7 @@
 #define MCCONF_FOC_CC_DECOUPLING		FOC_CC_DECOUPLING_DISABLED // Current controller decoupling
 #endif
 #ifndef MCCONF_FOC_OBSERVER_TYPE
-#define MCCONF_FOC_OBSERVER_TYPE		FOC_OBSERVER_MXLEMMING_LAMBDA_COMP // Position observer type for FOC
+#define MCCONF_FOC_OBSERVER_TYPE		FOC_OBSERVER_ORTEGA_ORIGINAL // Position observer type for FOC
 #endif
 #ifndef MCCONF_FOC_HFI_VOLTAGE_START
 #define MCCONF_FOC_HFI_VOLTAGE_START	20 // HFI voltage at start when resolving ambiguity
@@ -593,22 +593,22 @@
 
 // Setup Info
 #ifndef MCCONF_SI_MOTOR_POLES
-#define MCCONF_SI_MOTOR_POLES			14 // Motor pole count
+#define MCCONF_SI_MOTOR_POLES			30 // Motor pole count
 #endif
 #ifndef MCCONF_SI_GEAR_RATIO
-#define MCCONF_SI_GEAR_RATIO			3 // Gear ratio
+#define MCCONF_SI_GEAR_RATIO			1 // Gear ratio
 #endif
 #ifndef MCCONF_SI_WHEEL_DIAMETER
-#define MCCONF_SI_WHEEL_DIAMETER		0.083 // Wheel Diameter
+#define MCCONF_SI_WHEEL_DIAMETER		0.276 // Wheel Diameter
 #endif
 #ifndef MCCONF_SI_BATTERY_TYPE
 #define MCCONF_SI_BATTERY_TYPE			BATTERY_TYPE_LIION_3_0__4_2 // Battery Type
 #endif
 #ifndef MCCONF_SI_BATTERY_CELLS
-#define MCCONF_SI_BATTERY_CELLS			3 // Battery Cells
+#define MCCONF_SI_BATTERY_CELLS			4 // Battery Cells
 #endif
 #ifndef MCCONF_SI_BATTERY_AH
-#define MCCONF_SI_BATTERY_AH			6.0 // Battery amp hours
+#define MCCONF_SI_BATTERY_AH			30 // Battery amp hours
 #endif
 #ifndef MCCONF_SI_MOTOR_NL_CURRENT
 #define MCCONF_SI_MOTOR_NL_CURRENT		1.0 // Motor no load current
