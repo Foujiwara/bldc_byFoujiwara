@@ -20,7 +20,10 @@
 #ifndef HW_R350_V2
 #define HW_R350_V2
 
+#ifdef R350_V2_no_limit
+#else
 #define R350_V2
+#endif 
 
 #define MCCONF_L_MAX_VOLTAGE	85.0
 

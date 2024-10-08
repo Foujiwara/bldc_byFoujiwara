@@ -20,6 +20,8 @@
 #ifndef HW_R350_V2_NO_LIMITS_H_
 #define HW_R350_V2_NO_LIMITS_H_
 
+#define R350_V2_no_limit
+
 #define DISABLE_HW_LIMITS
 
 #include "hw_R350_V2.h"
