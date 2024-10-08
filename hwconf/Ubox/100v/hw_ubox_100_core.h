@@ -32,6 +32,8 @@
 #define HW_NAME					"UBOX_SINGLE_80"
 #elif defined (HW_UBOX_SINGLE_85_200)
 #define HW_NAME					"UBOX_SINGLE_85_200"
+#elif defined (R350_V2)
+#define HW_NAME					"R350_V2"
 #else
 #error "Must define hardware type"
 #endif
@@ -244,7 +246,7 @@
 #define MCCONF_L_MIN_VOLTAGE			12.0		// Minimum input voltage
 #endif
 #ifndef MCCONF_L_MAX_VOLTAGE
-#define MCCONF_L_MAX_VOLTAGE			93.0	// Maximum input voltage
+#define MCCONF_L_MAX_VOLTAGE			85.0	// Maximum input voltage
 #endif
 #ifndef MCCONF_DEFAULT_MOTOR_TYPE
 #define MCCONF_DEFAULT_MOTOR_TYPE		MOTOR_TYPE_FOC
@@ -274,6 +276,10 @@
 	#define HW_LIM_CURRENT			-150, 150.0
 	#define HW_LIM_CURRENT_IN		-150.0, 150.0
 	#define HW_LIM_CURRENT_ABS		0.0, 210.0
+#elif defined R350_V2
+	#define HW_LIM_CURRENT			-300, 350.0
+	#define HW_LIM_CURRENT_IN		-250.0, 250.0
+	#define HW_LIM_CURRENT_ABS		0.0, 400.0
 #else
 	#define HW_LIM_CURRENT			-135.0, 135.0
 	#define HW_LIM_CURRENT_IN		-135.0, 135.0
@@ -288,9 +294,16 @@
 	#define HW_LIM_VIN				11.0, 95.0
 #endif
 
-#define HW_LIM_ERPM				-200e3, 200e3
-#define HW_LIM_DUTY_MIN			0.0, 0.1
-#define HW_LIM_DUTY_MAX			0.0, 0.99
+#ifdef R350_V2
+	#define HW_LIM_ERPM				-200e3, 200e3
+	#define HW_LIM_DUTY_MIN			0.0, 0.1
+	#define HW_LIM_DUTY_MAX			0.0, 0.95
+#else
+	#define HW_LIM_ERPM				-200e3, 200e3
+	#define HW_LIM_DUTY_MIN			0.0, 0.1
+	#define HW_LIM_DUTY_MAX			0.0, 0.99
+#endif
+
 #define HW_LIM_TEMP_FET			-40.0, 110.0
 
 // HW-specific functions
