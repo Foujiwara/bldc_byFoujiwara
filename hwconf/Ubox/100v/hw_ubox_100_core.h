@@ -33,7 +33,7 @@
 #elif defined (HW_UBOX_SINGLE_85_200)
 #define HW_NAME					"UBOX_SINGLE_85_200"
 #elif defined (R350_V2)
-#define HW_NAME					"R350_V2"
+#define HW_NAME					"R350_V2_NO_LIMIT_NO_WARRANTY"
 #else
 #error "Must define hardware type"
 #endif
