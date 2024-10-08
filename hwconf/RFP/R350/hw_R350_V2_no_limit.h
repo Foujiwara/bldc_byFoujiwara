@@ -24,6 +24,6 @@
 
 #define DISABLE_HW_LIMITS
 
-#include "hw_R350_V2.h"
+#include "hw_R350_V2_core.h"
 
 #endif
